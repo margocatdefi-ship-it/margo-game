@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Margô Hunt</title>
+    <script src="https://telegram.org"></script>
+    <style>
+        body { margin: 0; background: #1a1a1a; color: white; font-family: sans-serif; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+        #game-canvas { border: 2px solid #f3ba2f; background: #222; width: 90vw; height: 60vh; position: relative; border-radius: 15px; }
+        .margo { position: absolute; bottom: 20px; left: 50px; font-size: 40px; }
+        .token { position: absolute; right: -50px; top: 100px; font-size: 30px; animation: moveToken 3s linear infinite; }
+        @keyframes moveToken { from { right: -50px; } to { right: 110%; } }
+        button { background: #f3ba2f; border: none; padding: 15px 30px; border-radius: 25px; font-weight: bold; font-size: 18px; margin-top: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>🐾 Margô Street Hunt</h1>
+    <p>A rede BNB precisa de você!</p>
+    
+    <div id="game-canvas">
+        <div class="margo">🐱</div>
+        <div class="token">🟡</div>
+    </div>
+
+    <button onclick="burn()">QUEIMAR MRG 🔥</button>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Faz o jogo ocupar a tela toda
+
+        function burn() {
+            alert("Margô queimou tokens MRG com sucesso! 🔥");
+            // Aqui futuramente conectaremos com a rede BNB
+        }
+    </script>
+</body>
+</html>
